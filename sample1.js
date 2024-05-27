@@ -3,5 +3,5 @@ var click = document.getElementById('click');
 click.onclick = fun;
 
 function fun(){
-    alert('Hiii Every one');
+    alert('Are You Click that button');
 }
