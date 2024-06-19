@@ -1,14 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sample HTML</title>
-</head>
-<body>
-    <h2>Sample Page in Github</h2>
-    <button id="click">Click Here</button>
-    <link rel="stylesheet" href="style1.css">    
-    <script src="sample1.js"></script>
-</body>
+<html lang="eng">
+    <head>
+        <title>Time Set</title>
+        <meta name="author" content="sundar raj">
+        <meta name="Description" content="Sample on Time">
+        <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    </head>
+    <body>
+        <h2 id="time_zone   "></h2>
+
+    </body>
+    <script>
+        var times = setInterval(()=>{
+            var date=new Date();  
+            var day=date.getDate();  
+            var month=date.getMonth()+1;  
+            var year=date.getFullYear();  
+            var h=date.getHours().toString();
+            var m=date.getMinutes();
+            var s=date.getSeconds();
+            // document.getElementById('txt').innerHTML=h+":"+m+":"+s;
+            // console.log("<br>Date is: "+day+"-"+month+"-"+year h+":"+m+":"+s ); 
+            var time_zone =  day.toString().padStart(2,0)+ "-" +month.toString().padStart(2,0)+ "-"+ year+" "+h.toString().padStart(2,0)+":"+m.toString().padStart(2,0)+":"+s.toString().padStart(2,0);
+            document.querySelector("#time_zone").innerText = time_zone;
+        },1000);
+    </script>
 </html>
